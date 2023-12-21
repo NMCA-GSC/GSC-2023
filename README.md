@@ -27,7 +27,7 @@ We began with simple Arduino ATmega328 Board, but after some complications, we m
 | Screen | | [{PLACE}][7] |
 | TOTAL: | $ |
 
-![PARTS](/picture/12-21-23.jpg)
+![PARTS](./pictures/12-21-23.jpg)
 
 [1]: https://www.amazon.com/LAFVIN-Board-ATmega328P-Micro-Controller-Arduino/dp/B07G99NNXL/ref=sr_1_2_sspa?keywords=nano+arduino&qid=1703178922&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1
 
