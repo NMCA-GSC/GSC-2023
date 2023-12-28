@@ -1,4 +1,4 @@
-![LOGO](./pictures/VL.png)
+<img src="./pictures/VL.png" alt="LOGO" width="200"/>
 # VitalLink: CRITICAL INFORMATION FOR FIRST RESPONDERS
 This repository holds the Code and information for the Governor's STEM Challenge in 2023.
 
@@ -17,6 +17,26 @@ So, back to the drawing board, we decided to do something more technologically a
 
 ## THE DESIGN PROCCESS
 We began with simple Arduino ATmega328 Board, but after some complications, we moved to the Arduino Nano. The materials we used for the prototype were:
+
+<table>
+    <tr>
+        <th>ITEM</th>
+        <th>EST. PRICE</th>
+        <th>LINK</th>
+    </tr>
+    <tr>
+        <td>Arduino Nano (3ct)</td>
+        <td>$19.99</td>
+        <td><a href="#1">AMAZON</a></td>
+    </tr>
+    <tr>
+        <td>Pin Adapters (120ct)</td>
+        <td>$9.99</td>
+        <td><a href="#2">AMAZON</a></td>
+    </tr>
+
+</table>
+
 | ITEM | EST. PRICE | Link |
 |------|------------|------|
 | Aurdino Nano (3ct) | $19.99 | [AMAZON][1] | 
@@ -30,9 +50,9 @@ We began with simple Arduino ATmega328 Board, but after some complications, we m
 
 ![PARTS](./pictures/12-21-23.jpg)
 
-[1]: https://www.amazon.com/LAFVIN-Board-ATmega328P-Micro-Controller-Arduino/dp/B07G99NNXL/ref=sr_1_2_sspa?keywords=nano+arduino&qid=1703178922&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1
+<a id="1" href="https://www.amazon.com/LAFVIN-Board-ATmega328P-Micro-Controller-Arduino/dp/B07G99NNXL/ref=sr_1_2_sspa?keywords=nano+arduino&qid=1703178922&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1"></a>
 
-[2]: https://www.amazon.com/Elegoo-EL-CP-004-Multicolored-Breadboard-arduino/dp/B01EV70C78/ref=pd_bxgy_img_sccl_1/139-7626352-6596345?pd_rd_w=XUVed&content-id=amzn1.sym.7746dde5-5539-43d2-b75f-28935d70f100&pf_rd_p=7746dde5-5539-43d2-b75f-28935d70f100&pf_rd_r=RVH5JCW14DHTQ0FQBXV5&pd_rd_wg=Y8lHF&pd_rd_r=c09821bd-5907-4b85-8b2b-9487bfbfe712&pd_rd_i=B01EV70C78&th=1
+<a id="2" href="https://www.amazon.com/Elegoo-EL-CP-004-Multicolored-Breadboard-arduino/dp/B01EV70C78/ref=pd_bxgy_img_sccl_1/139-7626352-6596345?pd_rd_w=XUVed&content-id=amzn1.sym.7746dde5-5539-43d2-b75f-28935d70f100&pf_rd_p=7746dde5-5539-43d2-b75f-28935d70f100&pf_rd_r=RVH5JCW14DHTQ0FQBXV5&pd_rd_wg=Y8lHF&pd_rd_r=c09821bd-5907-4b85-8b2b-9487bfbfe712&pd_rd_i=B01EV70C78&th=1">
 
 [3]: https://www.amazon.com/dp/B09R47N37H/?coliid=I7GZG04WEFU60&colid=36A6QZKXD89C5&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
 
