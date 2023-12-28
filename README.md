@@ -19,6 +19,7 @@ So, back to the drawing board, we decided to do something more technologically a
 We began with simple Arduino ATmega328 Board, but after some complications, we moved to the Arduino Nano. The materials we used for the prototype were:
 
 <table>
+</table>
 
 | ITEM | EST. PRICE | Link |
 |------|------------|------|
@@ -30,8 +31,6 @@ We began with simple Arduino ATmega328 Board, but after some complications, we m
 | Bluetooth Module | $9.99 | [AMAZON][6] |
 | Screen | | [{PLACE}][7] |
 | TOTAL: | $ |
-
-</table>
 
 ![PARTS](./pictures/12-21-23.jpg)
 
