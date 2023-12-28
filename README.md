@@ -1,3 +1,4 @@
+![LOGO](./pictures/VL.png)
 # VitalLink: CRITICAL INFORMATION FOR FIRST RESPONDERS
 This repository holds the Code and information for the Governor's STEM Challenge in 2023.
 
