@@ -5,6 +5,19 @@ This repository holds the Code and information for the Governor's STEM Challenge
 ## THE CHALLENGE:
 >> Now that we live in a post-pandemic world, how can we improve overall mental, physical, or relational health and wellness in our homes, schools, and communities through the use of science, technology, engineering and math (STEM)?
 
+## THE TEAM
+**Carley Carmen Chavez-Williamson:** Project Designer
+
+**Daniel Chavez-Williamson:** Prototype Lead
+
+**Karma Bromwell:** Team Lead
+
+**Malachi Syfrett:** Programming lead
+
+**Taylor Sipes:** Application lead
+
+**Tristan McNally:** Engineering lead
+
 ## THE ORIGIN OF THE IDEA:
 The pandemic made us very aware of the mental health and general of those around the world. However, everyone is different, and there was no system that could help first responders to know what situation they are walking into. People with autism, who interacted with Police Officers often found it hard to comply, and the officers, sadly, had to turn to strong force to take control of the situation. Yet if they knew before hand, the officers would have had a very different approach.
 
@@ -34,6 +47,15 @@ We began with simple Arduino ATmega328 Board, but after some complications, we m
 
 ![PARTS](./pictures/12-21-23.jpg)
 
+
+
+
+
+
+
+
+
+
 [1]: https://www.amazon.com/LAFVIN-Board-ATmega328P-Micro-Controller-Arduino/dp/B07G99NNXL/ref=sr_1_2_sspa?keywords=nano+arduino&qid=1703178922&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1
 
 [2]: https://www.amazon.com/Elegoo-EL-CP-004-Multicolored-Breadboard-arduino/dp/B01EV70C78/ref=pd_bxgy_img_sccl_1/139-7626352-6596345?pd_rd_w=XUVed&content-id=amzn1.sym.7746dde5-5539-43d2-b75f-28935d70f100&pf_rd_p=7746dde5-5539-43d2-b75f-28935d70f100&pf_rd_r=RVH5JCW14DHTQ0FQBXV5&pd_rd_wg=Y8lHF&pd_rd_r=c09821bd-5907-4b85-8b2b-9487bfbfe712&pd_rd_i=B01EV70C78&th=1
@@ -45,3 +67,5 @@ We began with simple Arduino ATmega328 Board, but after some complications, we m
 [5]: https://www.amazon.com/dp/B07BJ2P6X6/?coliid=I17IYYXTB1CBL1&colid=36A6QZKXD89C5&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it
 
 [6]: https://www.amazon.com/Elegoo-EL-CP-004-Multicolored-Breadboard-arduino/dp/B01EV70C78/ref=pd_bxgy_img_sccl_1/139-7626352-6596345?pd_rd_w=XUVed&content-id=amzn1.sym.7746dde5-5539-43d2-b75f-28935d70f100&pf_rd_p=7746dde5-5539-43d2-b75f-28935d70f100&pf_rd_r=RVH5JCW14DHTQ0FQBXV5&pd_rd_wg=Y8lHF&pd_rd_r=c09821bd-5907-4b85-8b2b-9487bfbfe712&pd_rd_i=B01EV70C78&th=1
+
+[7]: https://amazon.com/link/to/screen
