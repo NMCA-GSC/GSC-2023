@@ -1,21 +1,18 @@
 from environs import Env
-import hashlib, time, zlib, rsa
+import hashlib, time, rsa
 import encryption, os
 
-global NAME, EMERGENCY_CONTACT, SOCIAL_SECURITY, DOB
-
 public=Env()
-public.read_env("public.env")
+public.read_env("env_hash.env")
 
-NAME = public("NAME")
-EMERGENCY_CONTACT=public("EMERGENCY_CONTACT")
-
+#decrypt file holding information
 def remove_secure():
     PASS_HASH = public("HASH")
     enc=encryption.Aes_enc()
     enc.dec_file("secure.env", PASS_HASH.encode())
     os.remove("secure.env.aes")
 
+#encrypt file holding information
 def resecure():
     PASS_HASH = public("HASH")
     enc=encryption.Aes_enc()
@@ -25,14 +22,5 @@ def resecure():
 
 #remove_secure()
 
-secure=Env()
-secure.read_env("secure.env")
 
-SOCIAL_SECURITY = secure("SS")
-DOB = secure("DOB")
-
-resecure()
-
-
-print(SOCIAL_SECURITY)
-print(DOB)
+#resecure()
