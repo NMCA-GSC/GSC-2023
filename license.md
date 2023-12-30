@@ -58,4 +58,19 @@ The "User", as defined in this license, shall refer to any persons, organization
 
 At anytime, the Authors have the right to amend this License, and may do so by putting a clearly stated amendment in a running `NOTICE.md` file. 
 
+Any file containing source code for the entity shal include the following license insert at the top of the code:
+    
+                        NMCA GSC LISCENSE
+                Copyright (c) <year> Authors.txt
+            See full license in attached license.md
+
+        The code contained below is a covered in full as 
+        part of the entity as defined in the license and
+        it's stated admendments. No warranty or liability 
+        is claimed for the use of this code, which is 
+        provided on an AS-IS BASIS. 
+
+    
+    
+
 END OF TERMS AND CONDITIONS
