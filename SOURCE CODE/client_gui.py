@@ -106,7 +106,23 @@ aut_treat_info = tk.Label(root, text=aut_treat)
 aut_treat_info.grid(row=13, column=2, columnspan=1)
 
 cd_info_lbl = tk.Label(root, text="Cardiovascular Disease Info:")
-cd_info_lbl.grid(row=10, column=1, columnspan=2)
+cd_info_lbl.grid(row=14, column=1, columnspan=2)
+
+cd_risk_lbl = tk.Label(root, text="CD Risk: ")
+cd_risk_lbl.grid(row=15, column=1, columnspan=1)
+cd_risk_info = tk.Label(root, text=cd_risk)
+cd_risk_info.grid(row=15, column=2, columnspan=1)
+
+med_info_lbl = tk.Label(root, text="Medication info:")
+med_info_lbl.grid(row=16, column=1, columnspan=2)
+
+med_list = "\n".join(med_current)
+med_current_lbl = tk.Label(root, text="Current medications: ")
+med_current_lbl.grid(row=17, column=1, columnspan=1)
+med_current_info = tk.Label(root, text=med_list)
+med_current_info.grid(row=17, column=2, columnspan=1)
+
+
 
 
 
