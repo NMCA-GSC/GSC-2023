@@ -1,129 +1,66 @@
-from environs import Env
-import tkinter as tk
+import json, tkinter as tk
 
-data = Env()
-data.read_env("env_secure.env")
+# Read JSON data from file
+with open('env_secure.json', 'r') as file:
+    data = json.load(file)
+
+def info_packet(root, lbl, info, rw):
+    tk.Label(root, text=lbl).grid(row=rw, column=1, sticky='nw')
+    tk.Label(root, text=info).grid(row=rw, column=2, sticky='w')
+
+
+root=tk.Tk()
 
 #personal info
-name = data("name")
-dob = data("dob")
-num = data("num")
+personal_info = data.get('Personal Info', {})
+info_packet(root, "Name: ", personal_info.get("name", ""), 3)
+info_packet(root, "Date of Birth: ",personal_info.get("dob", ""),4)
+info_packet(root, "Phone Number: ",personal_info.get("num",""),5)
 
 #allergies
-med_al = data("Med_al")
-food_al = data("Food_al")
-al_treat = data("al_treat")
+allergies = data.get('Allergies', {})
+info_packet(root, "Medication Allergies: ",allergies.get("med_al", ''),7)
+info_packet(root,"Food Allergies: ",allergies.get("food_al"),8)
+info_packet(root,"Allergy Treatment: ",allergies.get("al_treat",''),9)
 
 #autism
-aut_type = data("aut_type")
-aut_trig = data("aut_trig")
-aut_treat = data("aut_treat")
+autism = data.get("Autism", {})
+info_packet(root, "Autism Disorder",autism.get("aut_type", ''),11)
+info_packet(root,"Autism Trigger", autism.get("aut_trig", ''),12)
+info_packet(root, "Autism treatment",autism.get("aut_treat", ''),13)
 
-#Cardiovascular Disease
-cd_risk = data("CD_risk")
+#cardiovascular risk
+cd_risk = data.get("Cardiovascular Disease", {})
+info_packet(root, "Cardiovascular Risk: ",cd_risk.get("CD_Risk"),15)
 
-#active Meds
-med_current = data("med_current")
+#active medication list
+act_med = data.get("Active Medications", {})
+med_current = act_med.get("med_current", {})
+med_list=''
+for item in med_current:
+    med_list += item + ': '+ med_current[item]+'\n'
+info_packet(root,"List of Medications: ",med_list[:-1],17)
 
-#Epilepsy
-ep_trig = data("EP_trig")
-ep_treat = data("EP_treat")
+#epilepsy
+epilepsy = data.get("Epilepsy",{})
+info_packet(root, "Epilepsy trigger: ",epilepsy.get("EP_trig", ''),19)
+info_packet(root, "Epilepsy treatment: ", epilepsy.get("EP_treat", ''), 20)
 
-#Mental Illness
-mi_types = data("mi_types")
-mi_trig = data("mi_trig")
-mi_treat = data("mi_treat")
+#mental illness
+men_ill = data.get("Mental Illness", {})
+info_packet(root, "Type of Mental Illness: ", men_ill.get("mi_type", ''), 22)
+info_packet(root, "Mental Illness trigger: ", men_ill.get("mi_trig", ''), 23)
+info_packet(root, "Mental Illness treatment: ", men_ill.get("mi_treat", ''), 24)
 
-#medical info
-ins_com = data("ins_com")
-pol_num = data("Pol_num")
-group_num = data("Group_num")
-pcp = data("PCP")
-pcp_num = data("PCP_num")
-emg_contact = data("emg_contact")
-emg_con_rel = data("emg_con_rel")
-emg_con_num = data("emg_con_num")
-
-#display window
-root = tk.Tk()
-root.title(f"Medical info for {name}")
-
-title_lbl = tk.Label(root, text=f"MEDICAL INFORMATION FOR {name.upper()}")
-title_lbl.grid(row=1, column=1, columnspan=2)
-
-pi_info_lbl = tk.Label(root, text="Personal Info:")
-pi_info_lbl.grid(row=2, column=1, columnspan=2)
-
-name_index_lbl = tk.Label(root, text="Name: ")
-name_index_lbl.grid(row=3, column=1, columnspan=1)
-name_info_lbl = tk.Label(root, text=name)
-name_info_lbl.grid(row=3, column=2, columnspan=1)
-
-dob_index_lbl = tk.Label(root, text="Date of Birth: ")
-dob_index_lbl.grid(row=4, column=1, columnspan=1)
-dob_info_lbl = tk.Label(root, text=dob)
-dob_info_lbl.grid(row=4, column=2, columnspan=1)
-
-num_index_lbl = tk.Label(root, text="Phone Number: ")
-num_index_lbl.grid(row=5, column=1, columnspan=1)
-num_info_lbl = tk.Label(root, text=num)
-num_info_lbl.grid(row=5, column=2, columnspan=1)
-
-al_info_lbl = tk.Label(root, text="Allergies Info:")
-al_info_lbl.grid(row=6, column=1, columnspan=2)
-
-ma_index_lbl = tk.Label(root, text="Medicine Allergies: ")
-ma_index_lbl.grid(row=7, column=1, columnspan=1)
-ma_info_lbl = tk.Label(root, text=med_al)
-ma_info_lbl.grid(row=7, column=2, columnspan=1)
-
-fa_index_lbl = tk.Label(root, text="Food Allergies: ")
-fa_index_lbl.grid(row=8, column=1, columnspan=1)
-fa_info_lbl = tk.Label(root, text=food_al)
-fa_info_lbl.grid(row=8, column=2, columnspan=1)
-
-at_index_lbl = tk.Label(root, text="Allergy Treatment: ")
-at_index_lbl.grid(row=9, column=1, columnspan=1)
-at_info_lbl = tk.Label(root, text=al_treat)
-at_info_lbl.grid(row=9, column=2, columnspan=1)
-
-aut_info_lbl = tk.Label(root, text="Autism Info:")
-aut_info_lbl.grid(row=10, column=1, columnspan=2)
-
-aut_type_lbl = tk.Label(root, text="Autism Disorder: ")
-aut_type_lbl.grid(row=11, column=1, columnspan=1)
-aut_type_info = tk.Label(root, text=aut_type)
-aut_type_info.grid(row=11, column=2, columnspan=1)
-
-aut_trig_lbl = tk.Label(root, text="Autism Triggers: ")
-aut_trig_lbl.grid(row=12, column=1, columnspan=1)
-aut_trig_info = tk.Label(root, text=aut_trig)
-aut_trig_info.grid(row=12, column=2, columnspan=1)
-
-aut_treat_lbl= tk.Label(root, text="Autism treatment: ")
-aut_treat_lbl.grid(row=13, column=1, columnspan=1)
-aut_treat_info = tk.Label(root, text=aut_treat)
-aut_treat_info.grid(row=13, column=2, columnspan=1)
-
-cd_info_lbl = tk.Label(root, text="Cardiovascular Disease Info:")
-cd_info_lbl.grid(row=14, column=1, columnspan=2)
-
-cd_risk_lbl = tk.Label(root, text="CD Risk: ")
-cd_risk_lbl.grid(row=15, column=1, columnspan=1)
-cd_risk_info = tk.Label(root, text=cd_risk)
-cd_risk_info.grid(row=15, column=2, columnspan=1)
-
-med_info_lbl = tk.Label(root, text="Medication info:")
-med_info_lbl.grid(row=16, column=1, columnspan=2)
-
-med_list = "\n".join(med_current)
-med_current_lbl = tk.Label(root, text="Current medications: ")
-med_current_lbl.grid(row=17, column=1, columnspan=1)
-med_current_info = tk.Label(root, text=med_list)
-med_current_info.grid(row=17, column=2, columnspan=1)
-
-
-
-
+#medical card info
+med_info = data.get("Medical Info", {})
+info_packet(root, "Insurance Company: ", med_info.get("ins_com", ''), 26)
+info_packet(root, "Policy Number: ", med_info.get("pol_num", ''), 27)
+info_packet(root, "Gorup Number: ", med_info.get("group_num", ''), 28)
+info_packet(root, "Primary Care Provider: ", med_info.get("PCP", ''), 29)
+info_packet(root, "     Phone Number: ", med_info.get("PCP_num", ''), 30)
+info_packet(root, "Emergency Contact: ", med_info.get("emg_contact",''),31)
+info_packet(root, "     Relation: ", med_info.get("emg_con_rel", ''), 32)
+info_packet(root, "     Phone Number: ", med_info.get("emg_con_rel", ''), 33)
 
 root.mainloop()

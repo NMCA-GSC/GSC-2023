@@ -18,7 +18,7 @@
     },
 
     "Cardiovascular Disease": {
-        "CD Risk": "High"
+        "CD_Risk": "High"
     },
 
     "Active Medications": {
@@ -46,7 +46,7 @@
         "PCP": "Yossi Cohen",
         "PCP_num": "+972(555)-555-5555",
         "emg_contact": "Ivan Petrov",
-        "emg_con_rel": "Legal Guardian",
+        "emg_con_rel": "Power of Attorney",
         "emg_con_num": "+8(555)-555-5555"
     }
 }
