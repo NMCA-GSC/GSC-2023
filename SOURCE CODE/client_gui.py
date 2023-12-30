@@ -87,4 +87,27 @@ at_index_lbl.grid(row=9, column=1, columnspan=1)
 at_info_lbl = tk.Label(root, text=al_treat)
 at_info_lbl.grid(row=9, column=2, columnspan=1)
 
+aut_info_lbl = tk.Label(root, text="Autism Info:")
+aut_info_lbl.grid(row=10, column=1, columnspan=2)
+
+aut_type_lbl = tk.Label(root, text="Autism Disorder: ")
+aut_type_lbl.grid(row=11, column=1, columnspan=1)
+aut_type_info = tk.Label(root, text=aut_type)
+aut_type_info.grid(row=11, column=2, columnspan=1)
+
+aut_trig_lbl = tk.Label(root, text="Autism Triggers: ")
+aut_trig_lbl.grid(row=12, column=1, columnspan=1)
+aut_trig_info = tk.Label(root, text=aut_trig)
+aut_trig_info.grid(row=12, column=2, columnspan=1)
+
+aut_treat_lbl= tk.Label(root, text="Autism treatment: ")
+aut_treat_lbl.grid(row=13, column=1, columnspan=1)
+aut_treat_info = tk.Label(root, text=aut_treat)
+aut_treat_info.grid(row=13, column=2, columnspan=1)
+
+cd_info_lbl = tk.Label(root, text="Cardiovascular Disease Info:")
+cd_info_lbl.grid(row=10, column=1, columnspan=2)
+
+
+
 root.mainloop()
