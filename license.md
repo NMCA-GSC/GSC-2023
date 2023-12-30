@@ -1,4 +1,3 @@
-<html></html>
                         NMCA GSC LICENSE AGREEMENT
                           APPROVED NOVEMBER, 2023
 
