@@ -1,4 +1,4 @@
-import tkinter as tk, json, os
+import tkinter as tk, json, os, shutil
 from tkinter import ttk
 
 def exec():
@@ -13,7 +13,12 @@ def exec():
         canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
 
     def on_close():
-        os.remove('env_secure.json')
+        try:
+            os.remove('env_secure.json')
+        except: pass
+        try: 
+            shutil.rmtree('__pycache__')
+        except: pass
         root.destroy()
 
 
@@ -54,7 +59,7 @@ def exec():
 
     #allergies
     allergy_frame=tk.Frame(frame, background="#3396E8")
-    allergy_frame.grid(row=2, column=1,columnspan=2, sticky='ew')
+    allergy_frame.grid(row=2, column=1,columnspan=2)
     title_packet(allergy_frame, "Allergy Information", 6)
     allergies = data.get('Allergies', {})
     info_packet(allergy_frame, "Medication Allergies: ",allergies.get("med_al", ''),7)
