@@ -1,11 +1,11 @@
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtWebEngineWidgets import *
-import sys
+import sys, set_up_fr
 
-class MainWindow(QMainWindow):
+class WebBrowser(QMainWindow):
     def __init__(self):
-        super(MainWindow, self).__init__()
+        super(WebBrowser, self).__init__()
         self.browser = QWebEngineView()
         self.browser.setUrl(QUrl('https://www.google.com'))
         self.setCentralWidget(self.browser)
@@ -39,8 +39,35 @@ class MainWindow(QMainWindow):
     def update_url(self, q):
         self.url_bar.setText(q.toString())
 
-app = QApplication(sys.argv)
-QApplication.setApplicationName("VITALINK")
-window = MainWindow()
+class Worker(QThread):
+    update_signal = pyqtSignal(str)
 
-app.exec()
+    def __init__(self, web_browser):
+        super(Worker, self).__init__()
+        self.web_browser = web_browser
+
+    def run(self):
+        set_up_fr.get_key()
+
+class MyApp(QMainWindow):
+    def __init__(self):
+        super(MyApp, self).__init__()
+
+        self.web_browser = WebBrowser()
+
+        self.worker_thread = Worker(self.web_browser)
+        self.worker_thread.update_signal.connect(self.update_ui)
+        self.worker_thread.start()
+
+    def update_ui(self, data):
+        print(data)
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    QApplication.setApplicationName("VITALINK")
+
+    my_app = MyApp()
+
+    my_app.web_browser.show()
+
+    sys.exit(app.exec_())
