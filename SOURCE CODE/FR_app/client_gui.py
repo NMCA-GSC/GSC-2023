@@ -59,7 +59,7 @@ def exec():
 
     #allergies
     allergy_frame=tk.Frame(frame, background="#3396E8")
-    allergy_frame.grid(row=2, column=1,columnspan=2)
+    allergy_frame.grid(row=2, column=1,columnspan=2, sticky='ew')
     title_packet(allergy_frame, "Allergy Information", 6)
     allergies = data.get('Allergies', {})
     info_packet(allergy_frame, "Medication Allergies: ",allergies.get("med_al", ''),7)
@@ -133,3 +133,6 @@ def exec():
 
     root.protocol("WM_DELETE_WINDOW", on_close)
     root.mainloop()
+
+if __name__ == '__main__':
+    exec()
