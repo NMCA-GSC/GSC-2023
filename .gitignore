@@ -3,6 +3,9 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
+# RSA key files made during testing
+*.[Pp][Ee][Mm]
+
 # User-specific files
 *.rsuser
 *.suo

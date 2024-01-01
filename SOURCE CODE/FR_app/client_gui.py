@@ -1,14 +1,20 @@
-import tkinter as tk, json
+import tkinter as tk, json, os
 from tkinter import ttk
 
 with open('env_secure.json', 'r+') as file:
     data = json.load(file)
+    file.close()
 
 def on_configure(event):
     canvas.configure(width=300, scrollregion=(0,0,0,710))
 
 def on_mousewheel(event):
     canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
+
+def on_close():
+    os.remove('env_secure.json')
+    root.destroy()
+
 
 root = tk.Tk()
 root.title("VITALINK")
@@ -118,4 +124,6 @@ canvas.bind('<Configure>', on_configure)
 # Bind the on_mousewheel function to the MouseWheel event of the Canvas
 canvas.bind_all('<MouseWheel>', on_mousewheel)
 canvas.update_idletasks()
+
+root.protocol("WM_DELETE_WINDOW", on_close)
 root.mainloop()
