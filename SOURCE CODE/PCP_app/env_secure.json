@@ -2,45 +2,38 @@
     "Personal Info": {
         "name": "Jahne Dow",
         "dob": "1\\1\\1970",
-        "num": "(555)-555-5555"
+        "num": "(555)-555-555"
     },
-
     "Allergies": {
-        "med_al": "Penicillin",
-        "food_al": "Peanuts",
-        "al_treat": "Epipen"
+        "med_al": "penicilllin",
+        "food_al": "peanuts",
+        "al_treat": "epipen"
     },
-
     "Autism": {
-        "aut_type": "Asperger's",
-        "aut_trig": "Social Interaction",
-        "aut_treat":"Use Straight forward language"
+        "aut_type": "aspergers",
+        "aut_trig": "Social interaction",
+        "aut_treat": "use straight forward language"
     },
-
     "Cardiovascular Disease": {
-        "CD_Risk": "High"
+        "CD_Risk": "]high"
     },
-
     "Active Medications": {
         "med_current": {
-            "Fexofenadine":"Allergies",
-            "Cephalexin":"Antibiotic"
+            "Fexofenadine": "Allergies",
+            "Cephalexin": "Antibiotic"
         }
     },
-
     "Epilepsy": {
-        "EP_trig": "Flashing Lights",
+        "EP_trig": "Flashing lights",
         "EP_treat": "Normal Procedure"
     },
-
     "Mental Illness": {
         "mi_type": "Schizophrenia",
         "mi_trig": "Chronic",
-        "mi_treat": "Ensure Medications are taken."
+        "mi_treat": "Ensure Medications are taken"
     },
-
     "Medical Info": {
-        "ins_com": "Medicare",
+        "ins_com": "medicare",
         "pol_num": "123456",
         "group_num": "654321",
         "PCP": "Yossi Cohen",
