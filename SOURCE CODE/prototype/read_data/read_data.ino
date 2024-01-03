@@ -16,7 +16,7 @@ void loop() {
   // Read and print each character until a null character is encountered
   while (1) {
     EEPROM.get(address, data);
-    if (data == '\0') {
+    if (data == '\6') {
       break; // Exit loop when null character is encountered
     }
     Serial.print(data);
