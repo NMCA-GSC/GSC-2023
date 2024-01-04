@@ -6,7 +6,7 @@ This repository holds the Code and information for the Governor's STEM Challenge
 >> Now that we live in a post-pandemic world, how can we improve overall mental, physical, or relational health and wellness in our homes, schools, and communities through the use of science, technology, engineering and math (STEM)?
 
 ## THE TEAM
-**Carley Carmen Chavez-Williamson:** prototype engineer/ designer
+**Carley Carmen Chavez-Williamson:** Project Designer
 
 **Daniel Chavez-Williamson:** Prototype engineer/designer
 
