@@ -11,10 +11,31 @@ void loop() {
 
   if (Serial.available() > 0) {
 
-    incomingByte = Serial.readStringUntil('\n');
-    Serial.write(incomingByte.c_str());
+  incomingByte = Serial.readStringUntil('\n');
+
+    if (incomingByte == "on") {
+
+      digitalWrite(LED_BUILTIN, HIGH);
+
+      Serial.write("Led on");
+
+    }
+
+    else if (incomingByte == "off") {
+
+      digitalWrite(LED_BUILTIN, LOW);
+
+      Serial.write("Led off");
+
+    }
+
+
+    else{
+
+     Serial.write(incomingByte.c_str());
+
+    }
 
   }
 
 }
-

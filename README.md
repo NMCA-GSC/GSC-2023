@@ -6,17 +6,17 @@ This repository holds the Code and information for the Governor's STEM Challenge
 >> Now that we live in a post-pandemic world, how can we improve overall mental, physical, or relational health and wellness in our homes, schools, and communities through the use of science, technology, engineering and math (STEM)?
 
 ## THE TEAM
-**Carley Carmen Chavez-Williamson:** Project Designer
+**Carley Carmen Chavez-Williamson:** prototype engineer/ designer
 
-**Daniel Chavez-Williamson:** Prototype Lead
+**Daniel Chavez-Williamson:** Prototype engineer/designer
 
-**Karma Bromwell:** Team Lead
+**Karma Bromwell:** application designer
 
-**Malachi Syfrett:** Programming lead
+**Malachi Syfrett:** Prototype engineer/Programmer
 
-**Taylor Sipes:** Application lead
+**Taylor Sipes:** Application designer
 
-**Tristan McNally:** Engineering lead
+**Tristan McNally:** Prototype engineer
 
 ## THE ORIGIN OF THE IDEA:
 The pandemic made us very aware of the mental health and general of those around the world. However, everyone is different, and there was no system that could help first responders to know what situation they are walking into. People with autism, who interacted with Police Officers often found it hard to comply, and the officers, sadly, had to turn to strong force to take control of the situation. Yet if they knew before hand, the officers would have had a very different approach.
@@ -66,6 +66,6 @@ We began with simple Arduino ATmega328 Board, but after some complications, we m
 
 [5]: https://www.amazon.com/dp/B07BJ2P6X6/?coliid=I17IYYXTB1CBL1&colid=36A6QZKXD89C5&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it
 
-[6]: https://www.amazon.com/Elegoo-EL-CP-004-Multicolored-Breadboard-arduino/dp/B01EV70C78/ref=pd_bxgy_img_sccl_1/139-7626352-6596345?pd_rd_w=XUVed&content-id=amzn1.sym.7746dde5-5539-43d2-b75f-28935d70f100&pf_rd_p=7746dde5-5539-43d2-b75f-28935d70f100&pf_rd_r=RVH5JCW14DHTQ0FQBXV5&pd_rd_wg=Y8lHF&pd_rd_r=c09821bd-5907-4b85-8b2b-9487bfbfe712&pd_rd_i=B01EV70C78&th=1
+[6]: https://www.amazon.com/dp/B01G9KSAF6/?coliid=I18RKL3LRP9NM4&colid=36A6QZKXD89C5&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it
 
 [7]: https://amazon.com/link/to/screen
