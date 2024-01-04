@@ -6,17 +6,17 @@ This repository holds the Code and information for the Governor's STEM Challenge
 >> Now that we live in a post-pandemic world, how can we improve overall mental, physical, or relational health and wellness in our homes, schools, and communities through the use of science, technology, engineering and math (STEM)?
 
 ## THE TEAM
-**Carley Carmen Chavez-Williamson:** Project Designer
+**Carley Carmen Chavez-Williamson:**  prototype engineer/ designer
 
-**Daniel Chavez-Williamson:** Prototype Lead
+**Daniel Chavez-Williamson:** Prototype engineer/designer
 
-**Karma Bromwell:** Team Lead
+**Karma Bromwell:** application designer
 
-**Malachi Syfrett:** Programming lead
+**Malachi Syfrett:** Prototype engineer/Programmer
 
-**Taylor Sipes:** Application lead
+**Taylor Sipes:** Application designer
 
-**Tristan McNally:** Engineering lead
+**Tristan McNally:** Prototype engineer
 
 ## THE ORIGIN OF THE IDEA:
 The pandemic made us very aware of the mental health and general of those around the world. However, everyone is different, and there was no system that could help first responders to know what situation they are walking into. People with autism, who interacted with Police Officers often found it hard to comply, and the officers, sadly, had to turn to strong force to take control of the situation. Yet if they knew before hand, the officers would have had a very different approach.
