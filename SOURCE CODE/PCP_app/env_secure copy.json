@@ -1,0 +1,45 @@
+{
+    "Personal Info": {
+        "name": "Jahne Dow",
+        "dob": "1\\1\\1970",
+        "num": "(555)-555-555"
+    },
+    "Allergies": {
+        "med_al": "penicilllin",
+        "food_al": "peanuts",
+        "al_treat": "epipen"
+    },
+    "Autism": {
+        "aut_type": "aspergers",
+        "aut_trig": "Social interaction",
+        "aut_treat": "use straight forward language"
+    },
+    "Cardiovascular Disease": {
+        "CD_Risk": "]high"
+    },
+    "Active Medications": {
+        "med_current": {
+            "Fexofenadine": "Allergies",
+            "Cephalexin": "Antibiotic"
+        }
+    },
+    "Epilepsy": {
+        "EP_trig": "Flashing lights",
+        "EP_treat": "Normal Procedure"
+    },
+    "Mental Illness": {
+        "mi_type": "Schizophrenia",
+        "mi_trig": "Chronic",
+        "mi_treat": "Ensure Medications are taken"
+    },
+    "Medical Info": {
+        "ins_com": "medicare",
+        "pol_num": "123456",
+        "group_num": "654321",
+        "PCP": "Yossi Cohen",
+        "PCP_num": "+972(555)-555-5555",
+        "emg_contact": "Ivan Petrov",
+        "emg_con_rel": "Power of Attorney",
+        "emg_con_num": "+8(555)-555-5555"
+    }
+}

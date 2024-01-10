@@ -1,4 +1,13 @@
 import json, tkinter as tk
+import serial, time
+import encryption, secrets
+
+def bt_write(port, data):
+    s = serial.Serial(port, 9600,timeout=10)
+    print("connected!")
+    time.sleep(10)
+    s.write(data+b'\n')
+    print("Sent Message!")
 
 def Title(boolean:bool):
     if boolean:
@@ -177,3 +186,16 @@ vitalink_info={
 
 with open("env_secure.json", 'w+') as outfile:
     json.dump(vitalink_info, outfile, indent=4)
+
+
+enc=encryption.File_Enc()
+passkey=secrets.randbits(256)
+nonce=secrets.randbits(64)
+
+enc.enc("env_secure.json", passkey, nonce)
+with open("env_secure.json.sla.bfs.aes", "wb+") as infile:
+    bt_write('COM5', infile.read())
+
+#send data to server. File used for simplicity.
+with open("../server/server", "wb+") as outfile:
+    outfile.write(passkey+b'\n\n'+nonce)
