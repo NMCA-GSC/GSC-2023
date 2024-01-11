@@ -1,4 +1,4 @@
-import rsa.randnum as r, os
+import rsa.randnum as r, binascii
 from Crypto.Cipher import AES, Blowfish, Salsa20
 from Crypto import Random
 
@@ -30,12 +30,14 @@ class Aes_enc:
         with open(filename, 'rb') as fo:
             plaintext = fo.read()
         enc = self.encrypt(plaintext, passkey)
+        enc_hex=binascii.hexlify(enc)
         with open(filename, 'wb') as fo:
-            fo.write(enc)
+            fo.write(enc_hex)
 
     def dec_file(self, filename, passkey):
         with open(filename, 'rb') as fo:
-            ciphertext = fo.read()
+            ciphertext_hex = fo.read()
+        ciphertext=binascii.unhexlify(ciphertext_hex)
         dec = self.decrypt(ciphertext, passkey)
         with open(filename, 'wb') as fo:
             fo.write(dec)
@@ -99,7 +101,7 @@ class Sla_enc():
         with open(filename, 'wb') as fo:
             fo.write(dec)
 
-#Encrypt file in one go and cleanup extra files
+#Encrypt file in one go
 class File_Enc(Enc):
     def __init__(self):
         super().__init__()
@@ -107,16 +109,11 @@ class File_Enc(Enc):
         self.sla=Sla_enc()
         self.bfs=Bfs_enc()
         self.aes=Aes_enc()
-        
-    def clean_files(self, list_of_files):
-        for file in list_of_files:
-            os.remove(file)
 
     def enc(self, filename, passkey, nonce):
         self.sla.enc_file(filename,passkey, nonce)
         self.bfs.enc_file(filename, passkey)
         self.aes.enc_file(filename, passkey)
-        #self.clean_files(files)
 
     def dec(self, filename, passkey, nonce):
         self.aes.dec_file(filename, passkey)

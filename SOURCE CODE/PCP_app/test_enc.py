@@ -1,29 +1,27 @@
-import serial, time
-import encryption, random
+import serial
+import time
+import base64
+import encryption
+import random
 
-def bt_write(port, data):
-    s = serial.Serial(port, 9600,timeout=10)
-    print("connected!")
-    time.sleep(10)
-    s.write(data+b'\4')
-    print("Sent Message!")
+def split_string_nth(string, n):
+    return [string[i:i+n] for i in range(0, len(string), n)]
 
-enc=encryption.File_Enc()
-passkey=random.randbytes(32)
-nonce=random.randbytes(8)
-'''
-with open("../server/server", "rb+") as infile:
-    data=infile.read().splitlines()
+passkey = random.randbytes(32)
+nonce = random.randbytes(8)
 
-enc.dec("env_secure.json", data[0], data[-1])
-
-'''
+enc = encryption.File_Enc()
 enc.enc("env_secure.json", passkey, nonce)
-with open("env_secure.json", "rb+") as infile:
-    try:
-        bt_write('COM5', infile.read())
-    except: pass
 
-#send data to server. File used for simplicity.
+s = serial.Serial('COM5', 9600, timeout=10)
+with open("env_secure.json", "rb+") as infile:
+    for line in infile:
+        sections = split_string_nth(line, 7)
+        for section in sections:
+            print(section)
+            s.write(section+b'\n')  # Ensure the data is encoded before sending
+            time.sleep(0.1)  # Reduce the delay
+
+# Send data to the server. File used for simplicity.
 with open("../server/server", "wb+") as outfile:
-    outfile.write(passkey+b'\n\n'+nonce)
+    outfile.write(passkey + b'\n\n' + nonce)
