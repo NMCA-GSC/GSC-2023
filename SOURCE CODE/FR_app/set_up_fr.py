@@ -1,4 +1,4 @@
-import rsa, rsa.pkcs1_v2
+import rsa
 
 def get_key():
     pub_key, priv_key=rsa.newkeys(512)

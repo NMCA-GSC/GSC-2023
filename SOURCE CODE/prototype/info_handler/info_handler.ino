@@ -26,7 +26,6 @@ void setup() {
 
 void loop() {
   static String incomingData;
-
   while (BTSerial.available() > 0) {
     char incomingChar = BTSerial.read();
 

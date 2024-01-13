@@ -183,8 +183,8 @@ vitalink_info={
 with open("env_secure.json", 'w+') as outfile:
     json.dump(vitalink_info, outfile, indent=4)
 
-passkey = random.randbytes(32)
-nonce = random.randbytes(8)
+passkey = random.randbytes(32).replace(b'\n', b'\0')
+nonce = random.randbytes(8).replace(b'\n', b'\0')
 
 enc = encryption.File_Enc()
 enc.enc("env_secure.json", passkey, nonce)

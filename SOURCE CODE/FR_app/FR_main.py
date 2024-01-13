@@ -2,7 +2,7 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtWebEngineWidgets import *
 import os, sys,  time
-import set_up_fr, client_gui
+import set_up_fr, client_gui, read_data
 
 class WebBrowser(QMainWindow):
     def __init__(self):
@@ -50,11 +50,15 @@ class Worker(QThread):
     def run(self):
         set_up_fr.get_key()
         while True:
-            if os.path.isfile("env_secure.json"):
-                client_gui.exec()
-                time.sleep(1)
-            else:
-                time.sleep(1)
+            try:
+                read_data.read_data()
+                if os.path.isfile("env_secure.json"):
+                    client_gui.exec()
+                    time.sleep(1)
+                else:
+                    time.sleep(1)
+            except:
+                pass
 
 class MyApp(QMainWindow):
     def __init__(self):
