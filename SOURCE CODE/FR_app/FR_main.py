@@ -58,6 +58,7 @@ class Worker(QThread):
                 else:
                     time.sleep(1)
             except:
+                time.sleep(1)
                 pass
 
 class MyApp(QMainWindow):
