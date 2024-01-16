@@ -10,6 +10,7 @@ enc = encryption.File_Enc()
 enc.enc("env_secure.json", passkey, nonce)
 
 s = serial.Serial('COM5', 9600, timeout=10)
+s.write(b'R')
 with open("env_secure.json", "rb+") as infile:
     for line in infile:
         sections = split_string_nth(line, 7)

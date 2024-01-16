@@ -2,9 +2,6 @@ import json, tkinter as tk
 import serial, time
 import encryption, random
 
-def split_string_nth(string, n):
-    return [string[i:i+n] for i in range(0, len(string), n)]
-
 def Title(boolean:bool):
     if boolean:
         return 2
@@ -183,6 +180,9 @@ vitalink_info={
 with open("env_secure.json", 'w+') as outfile:
     json.dump(vitalink_info, outfile, indent=4)
 
+def split_string_nth(string, n):
+    return [string[i:i+n] for i in range(0, len(string), n)]
+
 passkey = random.randbytes(32).replace(b'\n', b'\0')
 nonce = random.randbytes(8).replace(b'\n', b'\0')
 
@@ -190,6 +190,7 @@ enc = encryption.File_Enc()
 enc.enc("env_secure.json", passkey, nonce)
 
 s = serial.Serial('COM5', 9600, timeout=10)
+s.write(b'R')
 with open("env_secure.json", "rb+") as infile:
     for line in infile:
         sections = split_string_nth(line, 7)

@@ -50,16 +50,12 @@ class Worker(QThread):
     def run(self):
         set_up_fr.get_key()
         while True:
-            try:
-                read_data.read_data()
-                if os.path.isfile("env_secure.json"):
-                    client_gui.exec()
-                    time.sleep(1)
-                else:
-                    time.sleep(1)
-            except:
+            read_data.read_data()
+            if os.path.isfile("env_secure.json"):
+                client_gui.exec()
                 time.sleep(1)
-                pass
+            else:
+                time.sleep(1)
 
 class MyApp(QMainWindow):
     def __init__(self):
