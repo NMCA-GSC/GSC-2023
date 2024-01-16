@@ -38,15 +38,19 @@ We began with simple Arduino ATmega328 Board, but after some complications, we m
 |------|------------|------|
 | Aurdino Nano (3ct) | $19.99 | [AMAZON][1] | 
 | Pin adapters (120ct) | $9.99 | [AMAZON][2] |
-| Buttons (150ct) | $6.99 | [AMAZON][3] |
 | SD Card | $9.87 | [AMAZON][4] |
 | SD Card Reader (5ct)| $6.99 | [AMAZON][5] |
 | Bluetooth Module | $9.99 | [AMAZON][6] |
-| Screen | | [{PLACE}][7] |
-| TOTAL: | $ |
+| TOTAL: | $56.83 |
 
-![PARTS](./pictures/12-21-23.jpg)
+![DESIGN](./pictures/final_design.jpg)
 
+After trial and error, we completed the code that can be found [here](./SOURCE%20CODE/). The code is in full working condition as of commit [eb1fd61](https://github.com/NMCA-GSC/GSC-2023/commit/eb1fd619ff572d425eefc8cd507e21c4a651e7c5) and the latest commit.
+
+## RESOURCES FOR MORE INFORMATION
+Executive Summary: [CLICK HERE](https://docs.google.com/document/d/1iH7_TJfn2MjSRlwrjVU2uA3aKK6REbtMuwtvjB3ESQ8/edit)
+
+Design Proposal: [CLICK HERE](https://docs.google.com/document/d/18c0-xa_4yZfj1qwLakJLkkgxwEchhs4mza9R5Y2vzfc/edit)
 
 
 
@@ -60,12 +64,8 @@ We began with simple Arduino ATmega328 Board, but after some complications, we m
 
 [2]: https://www.amazon.com/Elegoo-EL-CP-004-Multicolored-Breadboard-arduino/dp/B01EV70C78/ref=pd_bxgy_img_sccl_1/139-7626352-6596345?pd_rd_w=XUVed&content-id=amzn1.sym.7746dde5-5539-43d2-b75f-28935d70f100&pf_rd_p=7746dde5-5539-43d2-b75f-28935d70f100&pf_rd_r=RVH5JCW14DHTQ0FQBXV5&pd_rd_wg=Y8lHF&pd_rd_r=c09821bd-5907-4b85-8b2b-9487bfbfe712&pd_rd_i=B01EV70C78&th=1
 
-[3]: https://www.amazon.com/dp/B09R47N37H/?coliid=I7GZG04WEFU60&colid=36A6QZKXD89C5&ref_=list_c_wl_lv_ov_lig_dp_it&th=1
-
 [4]: https://www.amazon.com/dp/B07R8GVGN9/ref=twister_B0BSYDVHBC?_encoding=UTF8&th=1
 
 [5]: https://www.amazon.com/dp/B07BJ2P6X6/?coliid=I17IYYXTB1CBL1&colid=36A6QZKXD89C5&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it
 
 [6]: https://www.amazon.com/dp/B01G9KSAF6/?coliid=I18RKL3LRP9NM4&colid=36A6QZKXD89C5&psc=1&ref_=list_c_wl_lv_ov_lig_dp_it
-
-[7]: https://amazon.com/link/to/screen
