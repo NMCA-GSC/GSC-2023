@@ -1,3 +1,17 @@
+###########################################################
+'''
+                    NMCA GSC LISCENSE
+            Copyright (c) <year> Authors.txt
+        See full license in attached license.md
+
+    The code contained below is a covered in full as 
+    part of the entity as defined in the license and
+    it's stated admendments. No warranty or liability 
+    is claimed for the use of this code, which is 
+    provided on an AS-IS BASIS. 
+'''
+###########################################################
+
 import rsa.randnum as r, binascii
 from Crypto.Cipher import AES, Blowfish, Salsa20
 from Crypto import Random
