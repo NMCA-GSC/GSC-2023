@@ -6,7 +6,8 @@
 _Problem: Now that we live in a post-pandemic world, how can we improve overall mental, physical, or relational health and wellness in our homes, schools, and communities through the use of science, technology, engineering and math (STEM)? Our team discussed a wide variety of issues New Mexicans face today. We determined that mental and physical health issues are a priority that needs to be addressed. We elected to focus on communication disorders as approximately 7.7% of adults 18 and older are reported to have some type of communication disorder. Additionally, Autism spectrum Disorder (ASD) is not included in the classification, although many people who have ASD experience challenges in social interaction and communication. The prevalence of autism in the US is estimated to be approximately 2.5% of the population. The population of individuals in the US that experience significant disabilities and reduced functionality exceeds 66,380,000…_
 
 __Research and background:__ On average, people with developmental disabilities are seven times more likely to come into contact with police officers and first responders than the average person (Enaya, 2023). People with these developmental disabilities and neurodivergence, like autism and encephalitis, can have difficulty communicating with others and responding to outside stimuli. This can be especially detrimental if they are placed into a dangerous situation, because they will not know how to react, and are unable to explain themselves. Police use excessive force against individuals with disabilities and the media often blames the person’s disability over the first responder’s response to the situation. New Mexico has one of the highest rates of police killings per capita (Diaz, 2023). According to an estimate made by the CDC, about 30% of New Mexico’s adult population, or 1 in every 3 adult people, have a disability of some type. The graph for the CDC’s percentage is pictured below [1]. 
-<img src="./pictures/graph.png" alt="graph" width="200"/>
+
+<img src="./pictures/graph.png" alt="graph"/>
 
 The global pandemic revealed the weaknesses of reliable communication in emergency situations. People who have communication disorders have a difficult time communicating in normal times, but especially so during abnormal/emergency circumstances. Often, people with communication disorders have other medical issues that prevent them from effectively communicating such as when they are in a heightened state of emotion, they will become frustrated and become unable to express themselves with words.  An example we faced during the pandemic was trying to help my brother adjust to the changing world that came with it by wearing a mask, communicating with other people wearing masks and  many changed routines. My brother also had trouble communicating on zoom instead of in person because zoom interactions between people were much more individualized and that proved challenging for him. And it was not just my brother who felt this way but many others in the community of neurodivergent thinkers as well. The pandemic really highlighted mental health and the fact that some people have more trouble adapting to changes than others, but more importantly, it showed that a lot of people have trouble expressing their feelings and their mental health issues. This most concerns me when I think back to the police brutality that we witnessed during the pandemic. It is a  concern because my brother, and many people with communication disabilities and mental health disorders, have trouble answering questions and expressing themselves. They could  be subject to the same harsh treatment we saw from the police. We hope that this device could possibly help the police be more aware of what the citizens might be going through and hold off on using aggressive action, as is protocol.
 
@@ -37,7 +38,8 @@ The app: Taylor and Karma used Freehand InVision to create the initial design fo
 The First Responder version of the app includes the Login Page, Create Account Page, Profile Page, Terms and Conditions Page, Home Map Page, and Device Connection Page. The Login, Create Account, and Terms and Conditions Page are the same as the Members. The Home Page includes a Map on the screen that shows where the first responder is located at and where the device of the person who needs help is located at. The Map also includes a Key that shows info of the map and what the symbols means. The Device Connection Page includes the connection of the device app connected to the Members device app. The Profile Page is almost the same as the Members profile page, it just does not have the Guardian Control option on there. 
 
 InVision APP DESIGN:
-![image](https://github.com/NMCA-GSC/GSC-2023/blob/main/pictures/app%20design.png)
+
+<img src="./pictures/app520design.png" alt="app design"/>
 
 
 The Physical Prototype:
@@ -48,7 +50,8 @@ __Refinements/Changes to design:__ The prototype of the device was simplified fr
 __Effectiveness and quality of design:__
 Right now the sending and receiving of the information is a little slow, and relies on a manual connection to the bluetooth device. Future versions will need a code to connect the bluetooth device automatically (which may require a change from the bluetooth HC-05 module to a BLE module). Our design was mostly chosen for proof of concept. We have successfully shown that a file holding the person’s medical information can be securely transferred from a device to a first responder device, using __triple-layer encryption.__ See Below:
 InVision APP DESIGN:
-![image](https://github.com/NMCA-GSC/GSC-2023/blob/main/pictures/encryption%20layers.png)
+
+<img src="./pictures/encryption%20layers.png" alt="encryption layers"/>
 
 __Budget:__
 Materials:
@@ -81,7 +84,9 @@ The Primary care provider’s app is simple, allowing for the medical informatio
  
 The first responder app is the next part. When it is not in range of a device, it has a usable purpose as a google search engine. When it detects a device, it reads the encrypted file from the device and, applying proper user authentication, gets the encryption keys from the server so that the file can be decrypted. The file is then read into a program that allows it to be displayed in an easily readable way for the first responder. The full process is described in the graphic below.
 InVision APP DESIGN:
-![image](https://github.com/NMCA-GSC/GSC-2023/blob/main/pictures/Flowchart.png)
+
+<img src="./pictures/Flowchart.png" alt="flowchart"/>
+
 The prototype codes itself serves only to differentiate between the PCP app and the First Responder app so it knows whether to send or receive the file. It relies solely on Bluetooth to send and receive files, given that WiFi allows for the possibility of mass hacking, if the server information got leaked. Currently the server is represented solely by a file, due to budget restraints.
 
 __Effectiveness and quality of design:__
