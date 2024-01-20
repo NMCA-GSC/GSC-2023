@@ -39,7 +39,7 @@ The First Responder version of the app includes the Login Page, Create Account P
 
 InVision APP DESIGN:
 
-<img src="./pictures/app520design.png" alt="app design"/>
+<img src="./pictures/app%20design.png" alt="app design"/>
 
 
 The Physical Prototype:
